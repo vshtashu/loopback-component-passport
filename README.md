@@ -15,7 +15,7 @@ linking for LoopBack applications.
 ### Enhancements provided to stock loopback-component-passport
 
 Allows email from social media accounts to be set as username and email in user model.
-** Works in userIdentity model for now.
+**NOTE: Works in userIdentity model for now.
 
 Just add  "emailAsUserEmail": true &  "emailAsUsername": true in providers.json similar to profileUrl as in case of facebook as :
 
@@ -24,7 +24,7 @@ Just add  "emailAsUserEmail": true &  "emailAsUsername": true in providers.json 
 ```
 
 Addition of profile data in user model. Support for complete profile or selective profile field described as "profileField".
-** Works in userIdentity model for now.
+**NOTE: Works in userIdentity model for now.
 
 ```
     "addInProfiles": {
