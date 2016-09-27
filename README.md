@@ -12,21 +12,22 @@ linking for LoopBack applications.
 
 ## All local accounts requires verification
 
-### All third party accounts will login with an email of `uniqueID@loopback.provider.com` example `123456@loopback.facebook.com`
+### Enhancements provided to stock loopback-component-passport
 
-which will allow the user to link the social media accounts that they want as well as the users could sign up with the same email account that is used for facebook/twitter/google/local if they wish to keep them separate.
+Allows email from social media accounts to be set as username and email in user model.
+** Works in userIdentity model for now.
 
-If more info is required from the Facebook profile such as email, it could still be obtained. In `node_modules\passport-facebook\lib\strategy.js`, replace:
-
-```
-this._profileURL = options.profileURL || 'https://graph.facebook.com/me';
-```
-
-with
+Just add  "emailAsUserEmail": true &  "emailAsUsername": true in providers.json similar to profileUrl as in case of facebook as :
 
 ```
-this._profileURL = options.profileURL ||
-    'https://graph.facebook.com/v2.2/me?fields=first_name,gender,last_name,link,locale,name,timezone,verified,email,updated_time';
+    "profileURL": "https://graph.facebook.com/v2.7/me?fields=name,first_name,middle_name,last_name,gender,email,birthday,picture,cover,verified",
 ```
 
-All user required info including the email will be available, but the main email for the account will remain `uniqueID@loopback.facebook.com`.
+Addition of profile data in user model. Support for complete profile or selective profile field described as "profileField".
+** Works in userIdentity model for now.
+
+```
+    "addInProfiles": {
+      "profileField": "_json"   // optional if not required pass empty object
+    }
+```
