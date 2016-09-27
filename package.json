@@ -8,23 +8,23 @@
     "login",
     "security"
   ],
-  "homepage": "https://github.com/strongloop/loopback-component-passport",
+  "homepage": "https://github.com/vshtashu/loopback-component-passport",
   "version": "2.2.0",
   "engines": {
     "node": ">=0.10.0"
   },
   "maintainers": [
     {
-      "name": "Raymond Feng",
-      "email": "raymond@strongloop.com"
+      "name": "Ashu Vashishat",
+      "email": "vsht.ashu@gmail.com"
     }
   ],
   "bugs": {
-    "url": "https://github.com/strongloop/loopback-component-passport/issues"
+    "url": "https://github.com/vshtashu/loopback-component-passport/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/strongloop/loopback-component-passport.git"
+    "url": "git://github.com/vshtashu/loopback-component-passport.git"
   },
   "dependencies": {
     "passport": "^0.3.2",
@@ -41,9 +41,7 @@
     "supertest": "^2.0.0"
   },
   "scripts": {
-    "lint": "eslint .",
-    "test": "./node_modules/.bin/mocha -R spec --timeout 10000 test/*.js",
-    "posttest": "npm run lint"
+    "test": "./node_modules/.bin/mocha -R spec --timeout 10000 test/*.js"
   },
   "main": "./lib/index.js",
   "license": "Artistic-2.0"
